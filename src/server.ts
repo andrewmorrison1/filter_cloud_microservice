@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import { Request, Response } from "express";
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
 (async () => {
@@ -45,7 +46,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
           return res.status(500).send("Unable to process image");
           }
 	  }
-	 )
+	 );
 
   // Root Endpoint
   // Displays a simple message to the user
